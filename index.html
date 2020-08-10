@@ -4,14 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marine-Ship-Implementation</title>
-    <link type="stylesheet" href="./css/style.css">
-    <link type="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link type="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar Goes Here -->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"     data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <i class="fa fa-ship d-none d-sm-block"></i>
+            <a class="navbar-brand" href="#">Marine-Ship</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">
+                        <span class="fa fa-list"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends -->
+
+    <!-- Main Section Goes Here -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 offset-sm-2 align-self-center">
+                
+            </div>
+        </div>
+    </div> -->
+    <!-- Main Section end -->
    
+    <!-- Contact Us Section -->
+    <br>
+    <br>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-12 mb-2">
+               <h3>Want to buy our product?</h3>
+            </div>
+             <div class="col-12 col-md-9 align-item-center">
+                 <form>
+                     <div class="form-group row">
+                         <label for="firstname" class="col-md-2 col-form-label">
+                             First Name
+                         </label>
+                         <div class="col-md-10">
+                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label for="lastname" class="col-md-2 col-form-lable">
+                             Last Name
+                         </label>
+                         <div class="col-md-10">
+                             <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                         </div>
+ 
+                     </div>
+                     <div class="form-group row">
+                         <label for="telnum" class=" col-12 col-md-2 col-form-label">
+                             Contact No
+                         </label>
+                         <div class="col-5 col-md-3">
+                             <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area Code">
+                         </div>
+                         <div class="col-7 col-md-7">
+                             <input type="text" class="form-control" id="telnum" name="telnum" placeholder="Contact No">
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label for="emailid" class="col-md-2 col-form-lable">
+                             Email
+                         </label>
+                         <div class="col-md-10">
+                             <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                         </div>
+ 
+                     </div>
+                     <div class="form-group row">
+                         <div class="col-md-6 offset-md-2">
+                             <div class="form-check">
+                                 <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                 <label class="form-check-label" for="approve">
+                                     <strong>May we Contact you?</strong>
+                                 </label>
+                             </div>
+ 
+                         </div>
+                         <div class="col-md-3 offset-md-1">
+                             <select class="form-control">
+                                <option>Telephone</option>
+                                 <option>Telephone</option>
+                                 <option>Message</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label for="Feedback" class="col-md-2 col-form-lable">
+                             Any Query
+                         </label>
+                         <div class="col-md-10">
+                             <textarea class="form-control" id="Feedback" name="Feedback" rows="8"></textarea>
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <div class="offset-md-2 col-md-10">
+                             <button type="submit" class="btn btn-primary">
+                                 Send Message
+                             </button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+    </div>
+    <!-- Contact Section end -->
+    <!-- Footer Goes Here -->
+    <div class="footer1" id="contact-mee">
+		<footer class=".footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p id="main">Want to Collaborate or Discuss?</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="social-icons">
+                            <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                            
+                        </div>
+                    </div class="col-12">    
+                        <!-- Copyright section -->
+                        <p class="copyright">CopyRight 2020 All rights reserved | Made by Tejas , Om and Ashutosh</p>
+                    </div>   
+            </div>    
+		</footer>
+	</div>
+<!-- Footer ens -->
+
+<!-- Attached Social icon goes Here -->
+<div class="attached-social-icons">
+    <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="" target="_blank" ><i class="fa fa-instagram"></i></a>
+    <a href="" target="_blank"><i class="fa fa-facebook -f"></i></a>
     
-    <script src="./javascript/script.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</div>
+<!--Attached Social icon goes ends Here  -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
