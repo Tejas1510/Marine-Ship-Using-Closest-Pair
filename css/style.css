@@ -1,1 +1,202 @@
-/* css jos here */
+/* css goes here */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.nav-link{
+    margin-left: 25px;
+}
+.fa-ship{
+    padding-right: 5px;
+    font-size: 20px;
+}
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+/* Styling for footer Section */
+/* 
+#footer{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #262626;
+   margin-top: 10px;
+}
+#main{
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+}
+#main1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main2{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e6e3e3;
+    margin: 20px 10px;
+}
+.social-icons{
+    display: flex;
+    margin-bottom: 30px;
+    
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    margin-top: 20px;
+    color: #d9d9d9;
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.social-icons i{
+    color: #000000;
+}
+.social-icons a:hover,.attached-social-icons a:hover{
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    transition: all ease 0.5s;
+}
+.social-icons a:hover i,.attached-social-icons a:hover i{
+    color: #ffffff;
+    transition: all ease 0.8s;
+} */
+
+footer{
+    height: 300px;
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #262626;
+   margin-top: 10px;
+}
+footer p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer #main{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+footer #discussion{
+    font-size: 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer #discussion a{
+    font-size: 20px;
+    color: #ffffff;
+    width: 600px;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e6e3e3;
+    margin: 20px 10px;
+}
+.social-icons{
+    display: flex;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    margin-top: 20px;
+    color: #d9d9d9;
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.social-icons i{
+    color: #000000;
+}
+.social-icons a:hover,.attached-social-icons a:hover{
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    transition: all ease 0.5s;
+}
+.social-icons a:hover i,.attached-social-icons a:hover i{
+    color: #ffffff;
+    transition: all ease 0.8s;
+}
+.attached-social-icons{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+.attached-social-icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+
+}
+ 
+.attached-social-icons i{
+    color: #2b2b2b;
+    font-size: 20px;
+}
