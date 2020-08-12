@@ -25,6 +25,12 @@
     min-height:400px;
 }
 
+/* Styling for main section */
+
+#canvas{
+    border: solid black;
+}
+
 /* Styling for footer Section */
 /* 
 #footer{
