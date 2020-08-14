@@ -20,7 +20,9 @@
 nav{
     background-color: #512DA8;
 }
-
+.navbar-text{
+    cursor: pointer;
+}
 /* Styling for Header Section */
 .jumbotron {
     padding:130px 30px 70px 30px;
