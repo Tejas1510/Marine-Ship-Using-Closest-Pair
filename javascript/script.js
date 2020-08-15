@@ -1,5 +1,6 @@
 // Javascript goes here
 
+// Canvas
 const totalShips = 10, canvasHeight = 500, canvasWidth = 500;
 const destinationX = 460, destinationY = 20, space = 10;
 
@@ -16,7 +17,6 @@ class Ship {
 
 // Array of ships
 var ships = []
-
 
 // Accessing canvas object
 var canvas = document.getElementById('canvas');
@@ -85,20 +85,22 @@ function newAnimation() {
 
 }
 
-function closestPair() {
+// Closest Pair function
+function calculateClosestPair(ships) {
 
     pauseAnimation();
 
     // Calculate closest pair
     var minDistance = Number.MAX_VALUE;
     var closestShips = [null, null];
+    var numberOfShips = ships.length;
 
     function calculateDistance(ship1,ship2){
         return Math.sqrt((ship1.xPosition - ship2.xPosition)**2 + (ship1.yPosition - ship2.yPosition)**2);
     }
 
-    for (let i = 0; i < totalShips; i++) {
-        for (let j = i+1; j < totalShips; j++) {
+    for (let i = 0; i < numberOfShips; i++) {
+        for (let j = i+1; j < numberOfShips; j++) {
             
             if (!(ships[i].xPosition >= destinationX &&
                 ships[i].yPosition <= destinationY &&
@@ -131,5 +133,43 @@ function closestPair() {
     ctx.moveTo(closestShips[0].xPosition, closestShips[0].yPosition);
     ctx.lineTo(closestShips[1].xPosition, closestShips[1].yPosition);
     ctx.stroke();   
+}
 
+// Closest Pair (Calculate)
+function closestPair(){
+    calculateClosestPair(ships);
+}
+
+// Closest Pair (Select)
+function selectedClosestPair(){
+    animate();
+    
+    var x1,x2,y1,y2;
+
+    x1=document.getElementById('x1').value;
+    y1=document.getElementById('y1').value;
+    x2=document.getElementById('x2').value;
+    y2=document.getElementById('y2').value;
+
+    // Animate square
+    ctx.beginPath();
+    ctx.rect(x1, y1, x2-x1, y2-y1);
+    ctx.stroke();
+
+    var selectedShips = [];
+
+    for(let i=0; i<totalShips; i++){
+        if (ships[i].xPosition>=x1 && ships[i].xPosition<=x2
+            && ships[i].yPosition>=y1 && ships[i].yPosition<=y2){
+            selectedShips.push(ships[i]);
+        }
+    }
+
+    if (selectedShips.length>1){
+        calculateClosestPair(selectedShips);
+    }
+}
+
+function clearHighlights(){
+    animate();
 }

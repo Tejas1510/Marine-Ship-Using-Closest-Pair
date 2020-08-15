@@ -76,6 +76,53 @@
     </div>
     <!-- Login form modal ends -->
 
+    <!-- Select modal -->
+    <div id="selectModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Enter Coordinates</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="selectForm">
+                        <div class="form-row ml-2">
+                            <span>X1</span>
+                            <div class="form-group mr-5 col-sm-3">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="number" id="x1" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="0-500">
+                            </div>
+                            <span>Y1</span>
+                            <div class="form-group col-sm-3">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="number" id="y1" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="0-500">
+                            </div>
+                        </div>
+                        <div class="form-row ml-2">
+                            <span>X2</span>
+                            <div class="form-group mr-5 col-sm-3">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="number" id="x2" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="0-500">
+                            </div>
+                            <span>Y2</span>
+                            <div class="form-group col-sm-3">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="number" id="y2" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="0-500">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-sm ml-1" onclick="selectedClosestPair()">Calculate</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login form modal ends -->
+
     <!-- Header Section Goes Here -->
     <header class="jumbotron">
         <div class="container">
@@ -110,6 +157,8 @@
             <button type="button" class="btn btn-primary" onclick="playAnimation()">Play</button>
             <button type="button" class="btn btn-primary" onclick="pauseAnimation()">Pause</button>
             <button type="button" class="btn btn-primary" onclick="closestPair()">Calculate</button>
+            <button data-toggle="modal" data-target="#selectModal" type="button" class="btn btn-primary">Select</button>
+            <button type="button" class="btn btn-primary" onclick="clearHighlights()">Clear</button>
         </div>
 
     </div>
