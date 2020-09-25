@@ -2,16 +2,21 @@
 
 // Canvas
 const totalShips = 10, canvasHeight = 500, canvasWidth = 500;
-const destinationX = 460, destinationY = 20, space = 10;
+const space = 10;
+const destination = [[460,20],[460,460]]
 
 // Ship class
 class Ship {
     constructor(xPosition, yPosition) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
-        this.slope = (destinationY - yPosition) / (destinationX - xPosition);
-        this.incrementX = 1 / Math.sqrt(1 + this.slope ** 2);
-        this.incrementY = this.slope / Math.sqrt(1 + this.slope ** 2);
+        this.speed = Math.random() *2+ 0.5;
+        let ind = Math.random() < 0.5 ? 0 : 1;
+        this.destinationX = destination[ind][0];
+        this.destinationY = destination[ind][1];
+        this.slope = (this.destinationY - yPosition) / (this.destinationX - xPosition);
+        this.incrementX = this.speed / Math.sqrt(1 + this.slope ** 2);
+        this.incrementY = (this.slope*this.speed) / Math.sqrt(1 + this.slope ** 2);
     }
 }
 
@@ -42,12 +47,28 @@ function animate() {
 
     ctx.fillStyle = 'black';
 
-    ctx.fillRect(destinationX, destinationY, 20, 20);
+    ctx.fillRect(destination[0][0], destination[0][1], 20, 20);
+    ctx.fillRect(destination[1][0], destination[1][1], 20, 20);
 
     for (let i = 0; i < totalShips; i++) {
-        if (ships[i].xPosition < destinationX || ships[i].yPosition > destinationY) {
-            ships[i].xPosition += ships[i].incrementX;
-            ships[i].yPosition += ships[i].incrementY;
+        if (ships[i].incrementX>0) {
+            if (ships[i].xPosition < ships[i].destinationX){
+                ships[i].xPosition += ships[i].incrementX;
+            }
+        } else {
+            if (ships[i].xPosition > ships[i].destinationX){
+                ships[i].xPosition += ships[i].incrementX;
+            }
+        }
+
+        if (ships[i].incrementY>0) {
+            if (ships[i].yPosition < ships[i].destinationY){
+                ships[i].yPosition += ships[i].incrementY;
+            }
+        } else {
+            if (ships[i].yPosition > ships[i].destinationY){
+                ships[i].yPosition += ships[i].incrementY;
+            }
         }
     }
 }
@@ -76,8 +97,8 @@ function newAnimation() {
     pauseAnimation();
     // Assigning random coordinates to ships
     for (let i = 0; i < totalShips; i++) {
-        var x = Math.random() * (destinationX - space) + space;
-        var y = Math.random() * (canvasHeight - destinationY - space) + destinationY;
+        var x = Math.random() * (destination[0][0] - space) + space;
+        var y = Math.random() * (canvasHeight - destination[0][1] - space) + destination[0][1];
         ships[i] = (new Ship(x, y));
     }
 
@@ -102,10 +123,8 @@ function calculateClosestPair(ships) {
     for (let i = 0; i < numberOfShips; i++) {
         for (let j = i+1; j < numberOfShips; j++) {
             
-            if (!(ships[i].xPosition >= destinationX &&
-                ships[i].yPosition <= destinationY &&
-                ships[j].xPosition >= destinationX &&
-                ships[j].yPosition <= destinationY)){
+            if (!(ships[i].xPosition >= ships[i].destinationX &&
+                ships[j].xPosition >= ships[i].destinationX )){
 
                 var distance = calculateDistance(ships[i], ships[j]);
                 if ( distance < minDistance) {
